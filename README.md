@@ -47,7 +47,7 @@ This project aims to demonstrate my Frontend development skills using Angular an
 <p>Run the application in development mode</p>
 <code>$ ng serve</code>
 
-<p>The server will start on port:3333 - access: <a href="http://localhost:4200">http://localhost:4200</a></p>
+<p>The server will start on port:4000 - access: <a href="http://localhost:4200">http://localhost:4200</a></p>
 
 <h3>For running a Unit Tests</h3>
 
