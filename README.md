@@ -63,37 +63,3 @@ This project aims to demonstrate my Frontend development skills using Angular an
 <p>Run the application tests</p>
 <code>$ ng test</code>
 <p>The test is showing inside your default brownser</p>
-
-<style>
-h1,h2{
-    margin: 10px 0px 10px 0px;
-     text-align: center;
-}
-div{
-    text-align:center;
-}
-
-p{
-    margin: 10px 0px 10px 0px;
-}
-h1{
-    font-weight:bold;
-    align:center;
-}
-.front-icon{
-    vertical-align:middle;
-}
-
-img{
-    margin:0px 5px 0px 0px;
-}
-.menu{
-    text-align:center;
-}
-.menu-item{
-    margin:0px 5px 0px 0px;
-}
-h3,h4,h5{
-    font-weight:bold;
-}
-</style>
