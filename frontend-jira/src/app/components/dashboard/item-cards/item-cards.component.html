@@ -1,0 +1,24 @@
+<div class=" bg-white rounded-lg overflow-hidden shadow-lg m-4" [style.width.em]="getIssueWith()">
+  <div class="mx-4 my-4 space-y-2 font-normal text-base text-gray-darker">
+    <div>
+      <h5 class="font-bold text-lg"> {{issue?.getKey()}}</h5>
+      <img src="{{issue.getIssueIcon()}}" alt="">
+      <div class="whitespace-normal">
+        {{issue?.getSummary()}}
+      </div>
+      <div [innerHtml]="issue?.getDescription()" class="whitespace-normal"></div>
+      <div class="text-gray-light text-sm my-4">
+        Labels:{{issue?.getLabels()?.join(' , ')}}
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-start-1 font-sm text-gray-light text-sm">
+          <label class="font-bold block">Due Date</label>
+          <label>{{issue?.getDueDate().toLocaleDateString()}}</label>
+        </div>
+        <div class="col-start-2 font-sm text-gray-light text-sm">
+          <label class="font-bold block">Estimate</label>
+          <label>{{issue?.getEstimationInDays() | number: '1.0-0'}} days</label>
+        </div>
+      </div>
+    </div>
+  </div>

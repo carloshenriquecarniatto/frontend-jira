@@ -1,0 +1,41 @@
+<nav class="bg-blue-500">
+  <div class="wax-w-7xl mx-auto px-2 sm:px-6 lg:px8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex-shrink-0 flex items-center text-3xl">
+          <label class="block lg:hidden h-8 w-auto text-white">Jira Front End</label>
+          <label class="hidden lg:block h-8 w-auto text-white">Jira Front End</label>
+        </div>
+      </div>
+      <div class="inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="ml-4 flex text-2xl text-white p-1.5 bg-blue-500">
+          <label>Label:</label>
+          <label>{{labelFilter}}</label>
+        </div>
+        <div>
+          <button type="button" class="flex text-2xl text-white p-1.5 bg-blue-500  focus:bg-blue-700"
+            (click)="showMenu()">
+            <fa-icon [icon]="filterIcon"></fa-icon>
+          </button>
+          <div
+            class="origin-top-right z-20 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 {{this.visible}}"
+            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <div *ngFor="let label of labels$ | async" role="menuitem" class="text-gray-700 block px-4 py-2 text-sm">
+                <button (click)="setLabelFilter(label)">{{label}}</button>
+              </div>
+              <div role="menuitem" class="text-gray-700 block px-4 py-2 text-sm">
+                <button (click)="setLabelFilter('All')">All</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ml-3 relative">
+          <button type="button" class="flex text-2xl text-white p-1.5 bg-blue-500  focus:bg-blue-700" (click)="removeFilter()">
+            <fa-icon [icon]="trashIcon"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
