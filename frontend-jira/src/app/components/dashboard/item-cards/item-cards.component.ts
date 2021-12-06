@@ -21,7 +21,6 @@ export class ItemCardsComponent implements OnInit {
     let result = this.sanitizer.bypassSecurityTrustHtml(
       this.issue.getIssueIcon()
     );
-    console.log(result);
     return result;
   }
 }

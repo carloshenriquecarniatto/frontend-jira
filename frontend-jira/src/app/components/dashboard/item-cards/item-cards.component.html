@@ -2,8 +2,7 @@
   <div class="mx-4 my-4 space-y-2 font-normal text-base text-gray-darker">
     <div>
       <h5 class="font-bold text-lg"> {{issue?.getKey()}}</h5>
-      <div [innerHtml]="getIconSvg()">
-      </div>
+      <img src="{{issue.getIssueIcon()}}" alt="">
       <div class="whitespace-normal">
         {{issue?.getSummary()}}
       </div>
