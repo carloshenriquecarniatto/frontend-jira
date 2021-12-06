@@ -24,7 +24,7 @@ This project aims to demonstrate my Frontend development skills using Angular an
 
 <ul>
     <li><a href="https://yarnpkg.com/">Yarn</a></li>
-    <li><a href="https://getuikit.com/">UIKit</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
     <li><a href="https://angular.io/">Angular</a></li>
     <li><a href="https://nodejs.org/en/">Node.js</a></li>
     <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
