@@ -1,0 +1,11 @@
+<div *ngIf="!(issues$)" class="flex items-center">
+  <app-loading></app-loading>
+</div>
+<div *ngIf="errorMessage">
+  <app-error-message [message]="errorMessage"></app-error-message>
+</div>
+<div *ngIf="(issues$)" class="relative bg-gray-200 h-full" style="width: 119.5em;height: 55em;overflow-x: scroll;">
+  <div class="m-2">
+    <app-grouped-cards [dates$]="dates$" [labels$]="labels$" [issues$]="issues$"></app-grouped-cards>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<table>
+  <thead class="bg-gray-50">
+    <tr>
+      <th></th>
+      <th *ngFor="let date of (dates$ |async)" class="text-gray-800">
+        <label class="font-bold">{{date.toLocaleDateString()}}</label>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="bg-white divide-y" cdkDropList (cdkDropListDropped)="onDrop($event)">
+    <tr *ngFor="let label of (labels$ | async)" class="whitespace-nowrap">
+      <td class="bg-white text-center">
+        <label class="font-bold text-gray-800">{{label}}</label>
+      </td>
+      <td *ngFor="let date of (this.dates$| async)" [id]="date">
+        <div *ngFor="let issue of ( issues$ | filterByLabelAndDate:label : date | async )">
+          <app-item-cards [issue]="issue"></app-item-cards>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
