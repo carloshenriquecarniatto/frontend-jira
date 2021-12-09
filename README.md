@@ -49,6 +49,8 @@ This project aims to demonstrate my Frontend development skills using Angular an
 
 <p>The server will start on port:4000 - access: <a href="http://localhost:4200">http://localhost:4200</a></p>
 
+Obs: For the purpose of quickly solving the CORS problem and for testing purposes, you could use this extension in your browser: https://chrome.google.com/webstore/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai
+
 <h3>For running a Unit Tests</h3>
 
 <p>Clone this is repository:</p>
